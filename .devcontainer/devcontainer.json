@@ -1,0 +1,17 @@
+{
+  "name": "Atsumarii Kali Hacking VPS",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "features": {},
+  "postCreateCommand": "chmod +x scripts/scan.sh",
+  "forwardPorts": [80, 443, 8080, 8000],
+  "mounts": [
+    "source=${localWorkspaceFolder}/outputs,target=/workspaces/Atsumarii/outputs,type=bind"
+  ],
+  "remoteUser": "root"
+}
